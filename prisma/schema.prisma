@@ -6,6 +6,21 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Sprite {
+  id      Int      @id @default(autoincrement())
+  sprite  String   @db.VarChar(255)
+  Pokemon Pokemon?
+}
+
+model Pokemon {
+  id        Int    @id @default(autoincrement())
+  name      String @db.VarChar(20)
+  weight    Int
+  height    Int
+  sprite    Sprite @relation(fields: [sprite_id], references: [id])
+  sprite_id Int    @unique
 }

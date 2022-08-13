@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+
+    background-image: url('../public/imgs/PokemonCardBackground.png');
+    background-size: 100% 100%;
+    width: 20rem;
+    height: 30rem;
+
+}
+
+.button_container {
+    margin-top: 3rem;
+}
+
+.button_container button{
+    font-family: 'Silkscreen', cursive;
+
+    background-color: #fcd705;
+    color: black;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: transform 200ms ease-in-out;
+}
+
+.button_container button:hover{
+    transform: scale(1.1);
+}
+
+.img_container img{
+    width: 15rem;
+}
+
+.content {
+    font-family: 'Silkscreen', cursive;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.content h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 0.2rem;
+}
